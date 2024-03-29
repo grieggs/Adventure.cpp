@@ -1,9 +1,17 @@
 import openai
+from game import Game
+
+
+
 
 client = openai.OpenAI(
     base_url="http://localhost:8080/v1", # "http://<Your api-server IP>:port"
     api_key = "sk-no-key-required"
 )
+
+gameState = Game(client)
+
+
 
 message = input()
 messages = [
